@@ -31,7 +31,16 @@
 # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+
+ expanded = ''
+
+ for character in string:
+    
+        expanded += expanded[-1] * (int(character) - 3)
+ 
+ return expanded 
+
+ 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,7 +61,14 @@ def one(string):
 
 
 def two(number):
-    return False
+    
+ if number > 1:
+    for i in range(2, number):
+        if (number % i) == 0:
+          return False 
+ else: 
+     return True 
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -146,7 +162,13 @@ def five():
 
 
 def six(string):
-    return False
+
+    sentence = str(string).lower()
+
+    if sentence.endswith("py"):
+        return True 
+    else: 
+       return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -214,7 +236,10 @@ def eight(string,  a):
 
 
 def nine(string1, string2):
-    return False
+    if string1 in string2:
+        return True 
+    else: 
+        return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
