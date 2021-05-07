@@ -31,16 +31,14 @@
 # How does a for loop iterate through a string?
 
 def one(string):
+  
+  expanded = ''
+  
+  for char in string:
+      exapnded = expanded + char + char + char 
+  return expanded 
 
- expanded = ''
 
- for character in string:
-    
-        expanded += expanded[-1] * (int(character) - 3)
- 
- return expanded 
-
- 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -61,13 +59,15 @@ def one(string):
 
 
 def two(number):
-    
- if number > 1:
+
+    rule = True 
+
     for i in range(2, number):
         if (number % i) == 0:
-          return False 
- else: 
-     return True 
+          rule = False
+        break 
+   
+    return rule 
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -88,7 +88,15 @@ def two(number):
 
 
 def three(a):
-    return 1
+
+    x1 = int( "%s" % a )
+    x2 = int( "%s%s" % (a,a) )
+    x3 = int( "%s%s%s" % (a,a,a) )
+    x4 = int( "%s%s%s%s" % (a,a,a,a) )
+
+    return (x1+x2+x3+x4)
+
+   
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -120,7 +128,19 @@ def three(a):
 
 
 def four(string1, string2):
-    return ""
+
+    if len(str(string1)) != len(str(string2)):
+        return False
+
+    else:
+        result = ""
+
+        for i in range(len1):
+            result += string1[i]
+            result += string2[i]
+
+    return(result)
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -140,7 +160,8 @@ def four(string1, string2):
 
 
 def five():
-    return []
+    list = (random.sample([i for i in range(100,201) if i%2==0], 5))
+    return list
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -216,6 +237,11 @@ def seven(a, b, c):
 
 
 def eight(string,  a):
+
+    input_str = str(string)
+    removeby = int(a)
+
+
     return ""
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
