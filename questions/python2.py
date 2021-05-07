@@ -30,6 +30,8 @@
 # <HINT>
 # How does a for loop iterate through a string?
 
+import random 
+
 def one(string):
   
   expanded = ''
